@@ -13,8 +13,9 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 kb = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton(text="Рассчитать")
 button2 = KeyboardButton(text="Информация")
-kb.add(button1)
-kb.add(button2)
+# kb.add(button1) # добавили кнопку в первый ряд
+# kb.add(button2) # # добавили кнопку во второй ряд
+kb.row(button1, button2) # добавили две кнопки в один ряд
 
 class UserState(StatesGroup):
     age = State()
